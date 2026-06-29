@@ -1,0 +1,229 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+}
+
+body{
+background:#000;
+color:white;
+overflow-x:hidden;
+}
+
+#loader{
+position:fixed;
+width:100%;
+height:100vh;
+background:black;
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:1000;
+animation:hideLoader 3s forwards;
+}
+
+.netflix-logo{
+font-size:80px;
+color:#e50914;
+letter-spacing:5px;
+animation:zoom 2s infinite;
+}
+
+@keyframes zoom{
+50%{transform:scale(1.1);}
+}
+
+@keyframes hideLoader{
+90%{opacity:1;}
+100%{
+opacity:0;
+visibility:hidden;
+}
+}
+
+.hero{
+height:100vh;
+background:url("boyfriend.jpg") center/cover;
+position:relative;
+}
+
+.overlay{
+background:rgba(0,0,0,.6);
+height:100%;
+display:flex;
+flex-direction:column;
+justify-content:center;
+padding-left:8%;
+}
+
+.overlay h1{
+font-size:60px;
+color:#e5097bb5;
+}
+
+.overlay h2{
+font-size:35px;
+margin-top:10px;
+}
+
+.overlay p{
+margin-top:15px;
+font-size:22px;
+}
+
+button{
+margin-top:20px;
+width:220px;
+padding:15px;
+background:#e5098d62;
+border:none;
+color:white;
+cursor:pointer;
+font-size:18px;
+border-radius:8px;
+}
+
+.section{
+padding:60px;
+}
+
+.section h2{
+margin-bottom:30px;
+color:#e509ae98;
+}
+
+.cards{
+display:flex;
+gap:20px;
+overflow-x:auto;
+}
+
+.card{
+min-width:250px;
+background:#111;
+padding:30px;
+border-radius:12px;
+transition:.4s;
+}
+
+.card:hover{
+transform:scale(1.08);
+}
+
+.gallery{
+display:flex;
+gap:20px;
+overflow-x:auto;
+}
+
+.gallery img{
+width:280px;
+border-radius:12px;
+}
+
+.award{
+background:#e50989a1;
+padding:40px;
+text-align:center;
+font-size:32px;
+font-weight:bold;
+border-radius:15px;
+}
+
+.birthday{
+text-align:center;
+font-size:22px;
+}
+
+#letterPopup{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.8);
+justify-content:center;
+align-items:center;
+}
+
+.letter{
+background:white;
+color:black;
+padding:30px;
+width:80%;
+max-width:600px;
+border-radius:15px;
+position:relative;
+}
+
+.letter span{
+position:absolute;
+right:20px;
+top:15px;
+cursor:pointer;
+font-size:22px;
+}
+.cake-section{
+    text-align:center;
+}
+
+.cake{
+    margin:50px auto;
+    width:250px;
+    position:relative;
+}
+
+.candles{
+    display:flex;
+    justify-content:space-around;
+    margin-bottom:-10px;
+}
+
+.candle{
+    width:12px;
+    height:50px;
+    background:white;
+    position:relative;
+    cursor:pointer;
+}
+
+.candle::before{
+    content:"";
+    width:14px;
+    height:20px;
+    background:orange;
+    border-radius:50%;
+    position:absolute;
+    top:-18px;
+    left:-1px;
+    animation:flicker .5s infinite alternate;
+}
+
+.candle.out::before{
+    display:none;
+}
+
+@keyframes flicker{
+    from{transform:scale(1);}
+    to{transform:scale(1.15);}
+}
+
+.cake-top{
+    height:50px;
+    background:pink;
+    border-radius:10px 10px 0 0;
+}
+
+.cake-bottom{
+    height:80px;
+    background:#ff69b4;
+    border-radius:0 0 10px 10px;
+}
+
+#wishMessage{
+    margin-top:30px;
+    color:#e50914;
+    font-size:30px;
+}
